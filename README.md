@@ -1,2 +1,2 @@
 # YanXuan-Viusalization-system
-Viusalization system built by django and echarts
+Viusalization system built by Django (2.0.2) and echarts
