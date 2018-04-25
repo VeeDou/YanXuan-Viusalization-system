@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Office</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="../static/assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="../static/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../static/assets/css/style.css">
+        <link rel="stylesheet" href="../static/assets/css/animate.min.css">
+        <link rel="stylesheet" type="text/css" media="all" href="../static/assets/css/style-projects.css">
+        
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="../static/assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="../static/assets/ico/apple-touch-icon-57-precomposed.png">
+    </head>
+
+
+    <body>
+
+    <!-- Header -->
+        
+    <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+        <div class="container">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               
+            </div>
+        
+            <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+                        <a href="/index">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">Category</a>
+                    </li>
+                    <li class="active">
+                        <a href="/blog">SubCategory</a>
+                    </li>
+                    <li>
+                        <a href="/team">Team</a>
+                    </li>
+                    <li>
+                        <a href="/contact"><span>Contact</span></a>
+                    </li>
+                </ul>         
+            </div>
+        </div>
+    </nav>
+          
+
+
+    <!-- End Header -->
+
+
+    <!-- Main Container -->
+    <div id="banners"></div>
+    <div class="container">
+        <div class="row">
+            <div class="services-header">
+                
+                {% for key,value in names_dict.items %}
+                <h3 >
+                {{key}}:
+                {% for x in value %}   
+                <a href="http://localhost:8000/blog?type_id={{x.1}}">{{x.0}}</a>
+                 {% endfor %}
+               </h3>
+                {% endfor %}
+               
+                <p class="services-header-body"><em> Things we provide in Office </em>  </p><hr>
+            </div>
+        </div>
+  
+        <!-- Begin Services Row 1 -->
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 " id ="main" style='width:%50;height: 400px;float:left;margin-right:0;padding-right:0;border-right-width:0'>  </div>
+       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 " id ="main" style='width:%50;height: 400px;float:left;margin-right:0;padding-right:0;border-right-width:0'>
+            <ul class="list-group">
+                <!-- ids| orderby say goods-->
+                <h4>买了的都说好:</h4>
+                {%for key,value in data_as_sayed_good.items%}
+                    {% if forloop.counter <= 5 %}
+                      <a href="http://you.163.com/item/detail?id={{key}}" class="list-group-item active">
+                        <span class="badge">{{value}}</span>
+                    {{key}}
+                        </a>
+                    {% endif %}
+                {%endfor%}
+                
+              
+       
+            </ul>
+
+         </div>
+
+       <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 " id ="main" style='width:%50;height: 400px;float:left;margin-right:0;padding-right:0;border-right-width:0'>
+        <!-- ids| orderby ids  order by num, 
+            saygood*1000+com_num  cm>100  saygood>0.8 {id:value} -->
+        <ul class="list-group">
+            <h4>很多人买还说好：</h4>
+            {%for key,value in data_really_good.items%}
+                {% if forloop.counter < 5 %}
+                <a href="http://you.163.com/item/detail?id={{key}}" class="list-group-item active">
+                        <span class="badge">{{value}}</span>
+                    {{key}}
+                </a>
+          {% endif %}
+            {%endfor%}
+          
+        </ul>
+         </div>        
+
+    </div>  
+       
+        <!--End Main Container -->
+
+
+    
+    
+    <div class="copyright text center">
+        <p>&copy; Copyright 2014, <a href="#">Your Website Link</a>. Theme ThemeWagon.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+    </div>
+
+        
+    <script type="text/javascript" src="../static/js/jquery-1.10.2.min.js"></script>
+    <script src="../static/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+  </body>
+<script src="http://echarts.baidu.com/build/dist/echarts-all.js"></script>  
+<!-- 好评率，四分位点（2个） [1,2,3] -->
+  <script type="text/javascript">
+      option = {
+    tooltip : {
+        formatter: "{a} <br/>{b} : {c}%"
+    },
+    toolbox: {
+        show : true,
+        feature : {
+            mark : {show: true},
+            restore : {show: true},
+            saveAsImage : {show: true}
+        }
+    },
+    series : [
+        {
+            name:'业务指标',
+            type:'gauge',
+            startAngle: 180,
+            endAngle: 0,
+            center : ['40%', '70%'],    // 默认全局居中
+            radius : 200,
+            axisLine: {            // 坐标轴线
+                lineStyle: {       // 属性lineStyle控制线条样式
+                    width: 200
+                }
+            },
+            axisTick: {            // 坐标轴小标记
+                splitNumber: 10,   // 每份split细分多少段
+                length :12,        // 属性length控制线长
+            },
+            axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                formatter: function(v){
+                    switch (v+''){
+                        case '10': return '低';
+                        case '50': return '中';
+                        case '90': return '高';
+                        default: return '';
+                    }
+                },
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    color: '#fff',
+                    fontSize: 15,
+                    fontWeight: 'bolder'
+                }
+            },
+            pointer: {
+                width:20,
+                length: '90%',
+                color: 'rgba(255, 255, 255, 0.5)'
+            },
+            title : {
+                show : true,
+                offsetCenter: [0, '-60%'],       // x, y，单位px
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    color: '#fff',
+                    fontSize: 30
+                }
+            },
+            detail : {
+                show : true,
+                backgroundColor: 'rgba(0,0,0,0)',
+                borderWidth: 0,
+                borderColor: '#eee',
+                width: 100,
+                height: 40,
+                offsetCenter: [0, -40],       // x, y，单位px
+                formatter:'{value}%',
+                textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                    fontSize : 50,
+                    color: '#fff'
+                }
+            },
+            data:[{value: {{avg_say_good}}, name: '四星好评率'}]
+        }
+    ]
+};
+
+myChart = echarts.init(document.getElementById('main'));
+myChart.setOption(option,true);
+
+                    
+
+  </script>
+
+
+</html>

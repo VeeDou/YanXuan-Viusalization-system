@@ -1,0 +1,76 @@
+{"nodes": [
+    {"id": "X", "group": 0},
+    {"id": "A", "group": 1},
+    {"id": "B", "group": 1},
+    {"id": "C", "group": 1},
+    {"id": "D", "group": 1},
+    {"id": "E", "group": 1},
+    {"id": "F", "group": 1},
+
+    {"id": "A1", "group": 2},
+    {"id": "B1", "group": 2},
+    {"id": "C1", "group": 2},
+    {"id": "D1", "group": 2},
+    {"id": "E1", "group": 2},
+    {"id": "F1", "group": 2},
+
+    {"id": "A2", "group": 2},
+    {"id": "B2", "group": 2},
+    {"id": "C2", "group": 2},
+    {"id": "D2", "group": 2},
+    {"id": "E2", "group": 2},
+    {"id": "F2", "group": 2},
+
+    {"id": "a1", "group": 3},
+    {"id": "b1", "group": 3},
+    {"id": "c1", "group": 3},
+    {"id": "d1", "group": 3},
+    {"id": "e1", "group": 3},
+    {"id": "f1", "group": 3},
+
+    {"id": "aa", "group": 4,"image":"aa.png"},
+    {"id": "ab", "group": 4,"image":"ab.png"},
+    {"id": "ac", "group": 4,"image":"ac.png"},
+    {"id": "ad", "group": 4,"image":"ad.png"},
+    {"id": "ae", "group": 4,"image":"ae.png"},
+    {"id": "af", "group": 4,"image":"af.png"}
+    
+],
+    "links":[
+    {"source": "X", "target": "A", "value": 1},
+    {"source": "X", "target": "B", "value": 1},
+    {"source": "X", "target": "C", "value": 1},
+    {"source": "X", "target": "D", "value": 1},
+    {"source": "X", "target": "E", "value": 1},
+    {"source": "X", "target": "F", "value": 1},
+
+    {"source": "A", "target": "A1", "value": 1},
+    {"source": "A", "target": "B1", "value": 1},
+    {"source": "A", "target": "C1", "value": 1},
+    {"source": "A", "target": "D1", "value": 1},
+    {"source": "A", "target": "E1", "value": 1},
+    {"source": "A", "target": "F1", "value": 1},
+
+
+    {"source": "B", "target": "A2", "value": 1},
+    {"source": "B", "target": "B2", "value": 1},
+    {"source": "B", "target": "C2", "value": 1},
+    {"source": "B", "target": "D2", "value": 1},
+    {"source": "B", "target": "E2", "value": 1},
+    {"source": "B", "target": "F2", "value": 1},
+
+    {"source": "A1", "target": "a1", "value": 1},
+    {"source": "A1", "target": "b1", "value": 1},
+    {"source": "A1", "target": "c1", "value": 1},
+    {"source": "A1", "target": "d1", "value": 1},
+    {"source": "A1", "target": "e1", "value": 1},
+    {"source": "A1", "target": "f1", "value": 1},
+
+    {"source": "c1", "target": "aa", "value": 1},
+    {"source": "c1", "target": "ab", "value": 1},
+    {"source": "c1", "target": "ac", "value": 1},
+    {"source": "c1", "target": "ad", "value": 1},
+    {"source": "c1", "target": "ae", "value": 1},
+    {"source": "c1", "target": "af", "value": 1}
+]
+}

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <style>
+
+        .links line {
+          stroke: #f55; /*#999 */
+          stroke-opacity: 0.6; /* 不透明度 */
+        }
+         
+        .nodes circle {
+          stroke: #fff;
+          stroke-width: 1.5px;
+        }
+
+        </style>
+
+        <!-- meta data & title -->
+        <meta charset="utf-8">
+        <title>Office</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Favicon and touch icons -->
+        <link rel="shortcut icon" href="/../static/assets/ico/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/../static/assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/../static/assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/../static/assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="/../static/assets/ico/apple-touch-icon-57-precomposed.png">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="/http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <link href="/http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="/../static/assets/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="/../static/assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="/../static/assets/css/animate.min.css">
+        <link rel="stylesheet" href="/../static/assets/css/style.css">
+        
+    </head>
+  <body>
+
+    <!-- Header -->
+        
+    <nav id="navbar-section" class="navbar navbar-default navbar-static-top navbar-sticky" role="navigation">
+        <div class="container">
+            
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="navbar-brand wow fadeInDownBig" href="/index.html"><img class="office-logo" src="../static/assets/img/slider/Office.png" alt="Office"></a>      
+            </div>
+        
+            <div id="navbar-spy" class="collapse navbar-collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav pull-right">
+                    <li class="active">
+                        <a href="/index">Home</a>
+                    </li>
+                    <li>
+                        <a href="/about">Category</a>
+                    </li>
+                    <li>
+                        <a href="/blog">SubCategory</a>
+                    </li>
+                    <li>
+                        <a href="/team">Team</a>
+                    </li>
+                    <li>
+                        <a href="/contact"><span>Contact</span></a>
+                    </li>
+                </ul>         
+            </div>
+        </div>
+    </nav>
+
+    <!-- End Header -->
+    
+    {% block custom_content %}
+    
+    {% endblock %}
+
+    {% block detail %}
+  
+    {% endblock %}
+
+  </body>
+    {% block js %}
+
+     {% endblock %}
+
+</html>
